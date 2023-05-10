@@ -1,0 +1,233 @@
+
+body{
+    background-color: #bcd1eb;
+    font-family: 'Gabriela', serif;
+}
+
+.todalag{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                        "article article article"
+                        "main main main"
+                        "footer footer footer";
+}
+
+.todalag .header{
+    background-color: #bcd1eb;
+    color: #336666;
+    grid-area: header;
+    display: grid;
+    grid-template: "logo hol .";
+}
+
+.logo{
+    grid-area: logo;
+    margin: 10px;
+}
+
+.holmes{
+    text-align: center;
+    margin: auto;
+    font-size: xx-large;
+    font-weight: bolder;
+    grid-area: hol;
+    box-sizing: border-box;
+}
+
+.todalag .article{
+    background:linear-gradient(#bcd1ed,#a2bad1);
+    grid-area: article;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.todalag .main{
+    background:linear-gradient(#a2bad1, #bcd1ed);
+    grid-area: main;
+    display: grid;
+    gap: 5px;
+    grid-template: "encrip encrip tex" 500px 
+                "boton boton tex"100px;
+}
+
+.divencrip{
+    height: auto;
+    border-radius: 15px;
+    grid-area: encrip;
+}
+
+
+.encriptador{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 1px;
+    background-color: transparent;
+    font-family: 'Gabriela', serif;
+    color: #336666;
+    font-size: 30px;
+    resize: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.encriptador::placeholder{
+    color: #336666;
+}
+
+.divResultados{
+    height:auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 0px;
+    grid-area: tex;
+    display:grid;
+    gap: 10px;
+    grid-template:"img" auto
+    "pra" 40px
+    "txare" 40px
+    "boton" 40px;
+}
+
+.imge{
+    width: 30%;
+    margin: auto;
+}
+
+.resultados{
+    padding: 5px;
+    border: none;
+    color: #336666;
+    border-radius: 20px;
+    font-family: 'Gabriela', serif;
+    font-size: 20px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.ocultar{
+    display: none;
+}
+
+.boton3{
+    border: 1px solid #0e5555;
+    border-radius: 20px;
+    font-family: 'Gabriela', serif;
+    font-size: 15px;
+    color: #336666;
+    background-color: #bcd1eb;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.boton3:hover{
+    background-color: #8a96a3 ;
+    border-color: #08a7a7;
+    color: #003f3f;
+}
+
+.divBotones{
+    height: auto;
+    border-radius: 15px;
+    grid-area: boton;
+    display:grid;
+    grid-template: "txa txa txa ."
+                "btn1 btn1 btn2 btn2";
+}
+
+.simbolo{
+    float:left;
+}
+
+.psimbolo{
+    grid-area: txa;
+    font-family: 'Gabriela', serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #0c4040;
+}
+
+.boton1{
+    border: 1px solid #0e5555;
+    background-color: #336666;
+    border-radius: 20px;
+    font-family: 'Gabriela', serif;
+    font-size: 15px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    grid-area: btn1;
+}
+
+.boton1:hover{
+    background-color: #188a8a ;
+    border:1px solid #022323;
+}
+
+.boton2{
+    border: 1px solid #0e5555;
+    border-radius: 20px;
+    font-family: 'Gabriela', serif;
+    font-size: 15px;
+    color: #336666;
+    background-color: #bcd1eb;
+    cursor: pointer;
+    transition: .5s;
+    grid-area: btn2;
+} 
+
+.boton2:hover{
+    background-color: #8a96a3 ;
+    border-color: #08a7a7;
+    color: #003f3f;
+}
+
+.todalag .footer{
+    background-color: #bcd1eb;
+    grid-area: footer;
+    display: grid;
+    grid-template: "img txf";
+}
+
+.alogo{
+    grid-area: img;
+    margin: auto;
+}
+
+.texf{
+    grid-area: txf;
+    padding: 30px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+@media only screen and (max-width: 769px){
+    .todalag .main{
+        grid-template: "encrip encrip tex" auto
+        "boton boton boton"100px
+        ;
+    }
+}
+
+@media only screen and (max-width: 939px){
+    .todalag .main{
+        grid-template: "encrip encrip tex" 900px
+        "boton boton boton"100px
+        ;
+    }
+}
+
+@media only screen and (max-width: 630px){
+    .todalag .main{
+        grid-template: "encrip encrip encrip" 400px
+        "boton boton boton"100px
+        "tex tex tex"300px
+        ;
+    }
+}
